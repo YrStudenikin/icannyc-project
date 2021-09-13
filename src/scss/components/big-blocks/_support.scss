@@ -1,0 +1,54 @@
+.support {
+  position: relative;
+  background:
+    linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
+    url("../img/support-bg.png");
+  @include bg-cover;
+
+  &__container {
+    max-width: 1280px;
+  }
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    padding-top: 88px;
+  }
+
+  &__info {
+    width: 50%;
+    padding-right: 60px;
+
+    &-btn {
+      width: 438px;
+      height: 74px;
+      font-size: 24px;
+      border-radius: 10px;
+      font-family: "Cuprum", sans-serif;
+      transition: $transition;
+      @include not-last {
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  &__phone-wrap {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 121.7%;
+    color: $color-paragraph;
+    padding: 18px 0 40px;
+  }
+
+  &__phone {
+    height: 440px;
+    width: 500px;
+    background: url("../img/support-phone-view.png");
+    @include bg-cover;
+  }
+}

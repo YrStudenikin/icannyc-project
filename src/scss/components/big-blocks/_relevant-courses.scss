@@ -1,0 +1,122 @@
+.relevant-courses {
+  background: $color-black;
+  padding: 105px 0 90px;
+
+  &__container {
+    max-width: 1460px;
+  }
+
+  &__header {
+    @include flex-v-center;
+    justify-content: space-between;
+    padding-bottom: 34px;
+  }
+
+  &__more {
+
+    .more__text {
+      font-family: Cuprum, sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      color: #CFCFCF;
+    }
+  }
+
+  .course-card {
+    @include not-last {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__stat {
+    margin: 76px 0 96px;
+
+    &-container {
+      max-width: 1180px;
+    }
+
+    &-inner {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    &-item {
+      width: 33.333333%;
+      padding: 19px 65px;
+      background: $color-bg-blocks;
+
+      &:nth-child(2) {
+        margin: 0 36px;
+      }
+
+      &-title {
+        font-size: 48px;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      &-subtitle {
+        font-size: 18px;
+        color: #ADADAD;
+      }
+    }
+  }
+
+  &__footer {
+    max-width: 1690px;
+    margin-left: auto;
+    display: flex;
+  }
+
+  &__mail {
+    width: 55%;
+    margin-right: 104px;
+    align-self: center;
+  }
+
+  &__mail-title {
+    font-family: Cuprum, sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    margin-bottom: 40px;
+  }
+
+  &__team-wrap {
+    width: 45%;
+  }
+
+  &__form-group {
+    @include flex-v-center;
+
+    & > * {
+      height: 50px;
+    }
+  }
+
+  &__mail-input {
+    width: 34%;
+
+    &:nth-child(2) {
+      margin: 0 7px;
+    }
+  }
+
+  &__mail-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    flex-grow: 1;
+  }
+
+  &__team {
+    display: flex;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    overflow: hidden;
+  }
+
+  &__team-photo {
+    width: 180px;
+    height: 420px;
+  }
+}

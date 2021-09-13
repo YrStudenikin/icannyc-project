@@ -1,0 +1,60 @@
+.reviews {
+  height: 840px;
+  padding: 40px 0 96px;
+  background: $color-black;
+
+  &__container {
+    max-width: 1520px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__note {
+    width: 100%;
+    margin-bottom: 38px;
+    @include flex-v-center;
+    justify-content: space-between;
+
+    & > * {
+      @include flex-v-center;
+    }
+  }
+
+  &__subtitle {
+    font-family: Cuprum, sans-serif;
+    font-size: 24px;
+    color: #525252;
+  }
+
+  &__more-text {
+    font-size: 22px;
+    color: #848484;
+    margin-right: 30px;
+  }
+
+  &__more-link {
+    display: block;
+    height: 36px;
+    @include not-last {
+      margin-right: 23px;
+    }
+  }
+
+  &__more-icon {
+    fill: $color-white;
+    display: inline-block;
+    width: 36px;
+    height: 100%;
+    transition: $transition;
+
+    &:hover {
+      fill: $color-yellow;
+    }
+
+    &--vk {
+      width: 45px;
+    }
+  }
+}

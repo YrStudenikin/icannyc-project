@@ -1,0 +1,27 @@
+.about {
+  padding: 75px 0;
+  background: $color-black;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__left {
+    width: 30%;
+    padding-right: 70px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__right {
+    width: 70%;
+  }
+
+  &__desc {
+    padding-top: 17px;
+  }
+
+  &__more {
+    margin-top: auto;
+  }
+}

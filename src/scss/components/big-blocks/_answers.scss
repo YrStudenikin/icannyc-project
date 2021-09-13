@@ -1,0 +1,17 @@
+.answers {
+  padding: 40px 0 96px;
+  background: url("../img/answers/answers-bg.png");
+  @include bg-cover;
+
+  &__container {
+    max-width: 1520px;
+  }
+
+  &__title {
+    max-width: 620px;
+  }
+
+  &__accordion {
+    margin-top: 72px;
+  }
+}

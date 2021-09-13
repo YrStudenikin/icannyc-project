@@ -1,0 +1,12 @@
+.custom-list {
+
+  &__item {
+    @include flex-v-center;
+
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+
+
+}

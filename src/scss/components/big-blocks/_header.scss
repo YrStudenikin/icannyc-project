@@ -1,0 +1,31 @@
+.header {
+  position: relative;
+  background: $color-black;
+  width: 100%;
+
+  &--home {
+    @include absolute-h-center;
+    top: 0;
+    z-index: 99;
+    background: transparent;
+  }
+
+  &__inner {
+    padding-top: 38px;
+    padding-bottom: 34px;
+    @include flex-v-center;
+    justify-content: space-between;
+  }
+
+  &__right {
+    @include flex-all-center;
+  }
+
+  &__left {
+    @include flex-all-center;
+  }
+
+  &__logo {
+    @include flex-v-center;
+  }
+}

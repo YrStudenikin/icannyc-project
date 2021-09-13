@@ -1,0 +1,53 @@
+.countdown {
+  $item-margin: 6px;
+  $item-width: 61px;
+
+  &__title {
+    font-family: Cuprum, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: $color-white;
+    margin-bottom: 14px;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: max-content;
+  }
+
+  &__block {
+    width: calc(#{$item-width} * 2 + #{$item-margin});
+    display: flex;
+    flex-wrap: wrap;
+
+    .countdown__item:first-child {
+      margin-right: 6px;
+    }
+  }
+
+  &__item {
+    width: 61px;
+    height: 75px;
+    text-align: center;
+    background: #1d1d1d;
+    border-radius: 5px;
+
+    &-val {
+      font-size: 64px;
+    }
+  }
+
+  &__spacer {
+    font-size: 64px;
+    width: 18px;
+    margin: 0 5px;
+  }
+
+  &__unit-name {
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 24px;
+    margin-top: 7px;
+  }
+}

@@ -1,0 +1,64 @@
+.btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &--default {
+    border-radius: 10px;
+    padding: 17px 90px;
+    font-family: "Cuprum", sans-serif;
+    font-size: 22px;
+    transition: $transition;
+  }
+
+  &--yellow {
+    background: $color-yellow;
+    color: $color-black;
+
+    &:hover {
+      @include hover-btn-darken($color-yellow);
+    }
+  }
+
+  &--red-dark {
+    background: $color-red-dark;
+    color: $color-white;
+
+    &:hover {
+      @include hover-btn-darken($color-red-dark);
+    }
+  }
+
+  &--red-light {
+    background: $color-red-light;
+    color: $color-white;
+
+    &:hover {
+      @include hover-btn-darken($color-red-light);
+    }
+  }
+
+  &--dark {
+    background: #1A1A1A;
+    color: $color-white;
+
+    &:hover {
+      @include hover-btn-lighten(#1A1A1A);
+    }
+  }
+
+  &--icon {
+    padding: 17px 32px 17px 48px;
+    @include flex-v-center;
+    justify-content: space-between;
+
+    svg {
+      width: 33px;
+      height: 28px;
+    }
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

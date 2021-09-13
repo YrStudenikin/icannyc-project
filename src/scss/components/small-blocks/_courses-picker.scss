@@ -1,0 +1,89 @@
+.courses-picker {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 50px 0 120px;
+}
+
+input[type=checkbox] {
+  &:disabled ~ .courses-picker__card:active {
+    transform: scale(1);
+  }
+}
+
+.courses-picker__card {
+  width: 25%;
+  display: block;
+  padding: 0 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 200ms ease-in-out;
+  user-select: none;
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &-inner {
+    background: $color-white;
+    border-radius: 15px;
+    padding: 23px 40px 23px 30px;
+    height: 90px;
+    @include flex-v-center;
+    position: relative;
+  }
+
+  &-icon {
+    width: 43px;
+    height: 43px;
+    margin-right: 42px;
+  }
+
+  &-title {
+    font-family: Cuprum, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: $color-black;
+  }
+
+  .custom-checkbox__icon {
+    margin-left: auto;
+  }
+}
+
+
+.courses-picker__card--coming {
+  cursor: default;
+
+  &:active {
+    transform: scale(1);
+  }
+
+  .courses-picker__card-inner {
+    padding: 23px 16px 23px 30px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 150px;
+      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 98.36%);
+    }
+  }
+
+  .courses-picker__card-coming {
+    font-family: Cuprum, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: $color-white;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: auto;
+  }
+}

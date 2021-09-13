@@ -1,0 +1,40 @@
+.nav {
+
+  &__list {
+    @include flex-all-center;
+    margin-right: 98px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 74px;
+    }
+
+    &-arrow {
+      height: 9px;
+      width: 15px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    color: $color-white;
+    position: relative;
+
+    &:hover:after {
+      width: 100%;
+      transition: cubic-bezier(0.39, 0.575, 0.565, 1) $transition;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -4px;
+      height: 2px;
+      width: 0;
+      background: $color-white;
+    }
+  }
+}

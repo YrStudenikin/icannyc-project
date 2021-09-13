@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: $color-white;
+  background-color: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, li, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+svg {fill: $color-white}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.for-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.error {
+  border: 2px #ff4019 solid !important;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.block-title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 122.7%;
+  color: $color-white;
+
+  &--md {
+    font-size: 40px;
+  }
+
+  &--sm {
+    font-size: 36px;
+  }
+
+  &--black {
+    color: $color-black;
+  }
+
+  &--space {
+    margin-left: 28px;
+  }
+}
+
+.color-yellow {color: $color-yellow}
+.color-red {color: $color-red-light}
+
+.text-underline {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.page-bgtop {
+  background: url("../img/page-top-bg.png") center top;
+  background-size: contain;
+}

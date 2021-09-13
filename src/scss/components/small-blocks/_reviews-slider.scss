@@ -1,0 +1,17 @@
+.reviews-slider {
+  width: 100%;
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__slide {
+    $margin: 28px;
+    $all-margin-value: 56px;
+
+    width: calc((100% - #{$all-margin-value}) / 3);
+    @include not-last {
+      margin-right: $margin;
+    }
+  }
+}

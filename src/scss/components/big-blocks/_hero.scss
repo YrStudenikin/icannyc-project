@@ -1,0 +1,113 @@
+.hero {
+  height: auto;
+  width: 100%;
+  position: relative;
+
+  &:before {
+    @include after-before-cover;
+    background: url("../img/hero-bg.png");
+    @include bg-cover;
+    z-index: -1;
+  }
+
+  &:after {
+    @include after-before-cover;
+    background: linear-gradient(90.04deg, rgba(0, 0, 0, 0.72) 0.03%, rgba(0, 0, 0, 0) 99.96%);
+    transform: rotate(-180deg);
+    z-index: -1;
+  }
+}
+
+.hero-intro {
+  padding-top: 200px;
+  padding-bottom: 92px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 122.7%;
+    color: $color-white;
+    margin: 0 0 35px 0;
+  }
+
+  &__buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: max-content;
+  }
+
+  &__btn {
+    font-size: 22px;
+    margin-bottom: 15px;
+    max-width: max-content;
+  }
+
+  &__hint {
+    font-family: Cuprum, sans-serif;
+    font-size: 14px;
+    color: #C7C7C7;
+  }
+}
+
+.hero-bottom {
+  display: flex;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: $color-black;
+    height: 125px;
+    z-index: -1;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.hero-team {
+  display: flex;
+  overflow-x: hidden;
+  border-top-right-radius: 19px;
+  border-bottom-right-radius: 19px;
+  margin-right: 115px;
+
+  &__photo {
+    width: 190px;
+    height: 450px;
+    display: block;
+  }
+}
+
+.hero-stat {
+  padding-top: 40px;
+
+  &__item {
+
+    &:not(:last-child) {
+      padding-bottom: 20px;
+    }
+
+    &-title {
+      font-size: 36px;
+      line-height: 122.7%;
+      font-weight: 400;
+      color: $color-white;
+    }
+
+    &-subtitle {
+      font-size: 13px;
+      line-height: 18px;
+      color: #ADADAD;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.mail-chimp {
+
+  &__header {
+    @include flex-v-center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    width: 90%;
+  }
+
+  &__hint {
+    font-size: 18px;
+    color: #767676;
+    margin-right: 15px;
+  }
+
+  &__form-group {
+
+  }
+}

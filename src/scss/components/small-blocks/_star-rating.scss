@@ -1,0 +1,13 @@
+.star-rating {
+  @include flex-v-center;
+
+  &__item {
+    line-height: 1;
+    color: $color-yellow;
+    font-size: 27px;
+
+    @include not-last {
+      margin-right: 6px;
+    }
+  }
+}

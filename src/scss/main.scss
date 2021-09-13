@@ -1,0 +1,41 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// small blocks
+@import "components/small-blocks/logo";
+@import "components/small-blocks/nav";
+@import "components/small-blocks/player";
+@import "components/small-blocks/language";
+@import "components/small-blocks/btn";
+@import "components/small-blocks/socials";
+@import "components/small-blocks/more";
+@import "components/small-blocks/video";
+@import "components/small-blocks/courses-picker";
+@import "components/small-blocks/custom-checkbox";
+@import "components/small-blocks/custom-list";
+@import "components/small-blocks/course-card";
+@import "components/small-blocks/countdown";
+@import "components/small-blocks/mail-chimp";
+@import "components/small-blocks/input";
+@import "components/small-blocks/accordion";
+@import "components/small-blocks/created-by";
+@import "components/small-blocks/reviews-slider";
+@import "components/small-blocks/review-card";
+@import "components/small-blocks/_star-rating";
+
+// Big blocks
+@import "components/big-blocks/header";
+@import "components/big-blocks/container";
+@import "components/big-blocks/hero";
+@import "components/big-blocks/about";
+@import "components/big-blocks/advantages";
+@import "components/big-blocks/buy-courses";
+@import "components/big-blocks/buy-advantages";
+@import "components/big-blocks/support";
+@import "components/big-blocks/relevant-courses";
+@import "components/big-blocks/answers";
+@import "components/big-blocks/reviews";
+@import "components/big-blocks/footer";
+@import "components/big-blocks/catalog";

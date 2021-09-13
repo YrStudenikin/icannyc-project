@@ -1,0 +1,32 @@
+.input {
+  border: none;
+  outline: none;
+
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+  }
+
+  &--default {
+    font-family: Cuprum, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #8D8E90;
+    padding: 14px 24px;
+    border-radius: 10px;
+
+    &::placeholder {
+      color: #8D8E90;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &--bg-dark {
+    background: $color-bg-blocks;
+    color: #8D8E90;
+  }
+}

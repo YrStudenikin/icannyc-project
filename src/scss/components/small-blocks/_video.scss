@@ -1,0 +1,19 @@
+.video {
+  width: 100%;
+  height: 395px;
+  border-radius: 13px;
+  overflow: hidden;
+  position: relative;
+  background: url("../img/video-bg.png");
+  @include bg-cover;
+
+  &__btn {
+    height: 150px;
+    width: 150px;
+    @include absolute-all-center;
+
+    &--play {
+      background: url("../img/play.png") no-repeat center;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.socials {
+
+  &__text {
+    font-size: 16px;
+    color: #8D8D8D;
+    margin-bottom: 22px;
+  }
+
+  &__list {
+
+  }
+
+  &__link {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover svg {
+      fill: $color-red-dark;
+    }
+
+    &--hover-yellow:hover svg{
+      fill: $color-yellow;
+    }
+
+    svg {
+      width: 36px;
+      height: 36px;
+      fill: $color-white;
+      transition: $transition;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.more {
+  @include flex-v-center;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+
+  &:hover {
+    & .more__arrow {
+      animation: moveMoreArrow 1.7s ease-in-out infinite;
+    }
+  }
+
+  &__text {
+    color: $color-white;
+    font-size: 20px;
+    position: relative;
+
+    &--underline {
+      &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 1px;
+        background: $color-white;
+      }
+    }
+  }
+
+  &__arrow {
+    width: 37px;
+    height: 15px;
+    fill: $color-yellow;
+    padding-left: 10px;
+  }
+}
+
+@keyframes moveMoreArrow{
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
