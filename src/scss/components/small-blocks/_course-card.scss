@@ -4,6 +4,9 @@
   border-radius: 20px;
   //overflow: hidden;
   padding: 14px;
+  @include not-last {
+    margin-bottom: 27px;
+  }
 
   &--coming {
     @include flex-v-center;
@@ -22,6 +25,10 @@
       justify-content: flex-start;
       padding-left: 150px;
     }
+
+    &--two-col {
+      justify-content: space-between;
+    }
   }
 
   &__preview {
@@ -35,9 +42,47 @@
     z-index: 0;
   }
 
+  &__advantages {
+    padding-left: 40px;
+    padding-bottom: 20px;
+    align-self: flex-end;
+  }
+
+  &__advantages-title {
+    font-size: 24px;
+    color: $color-white;
+  }
+
+  &__advantages-list {
+    padding-top: 20px;
+  }
+
+  &__advantages-item {
+    position: relative;
+    font-size: 24px;
+    color: $color-white;
+    padding-left: 54px;
+    @include not-last {
+      margin-bottom: 26px;
+    }
+
+    &:before {
+      content: "";
+      @include absolute-v-center;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background: url("data:image/svg+xml,%3Csvg width='30' height='29' viewBox='0 0 30 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14.5' cy='14.5' r='13.5' stroke='white' stroke-width='2'/%3E%3Cpath d='M1.54452 11.2082C2.10242 10.5958 3.00695 10.5958 3.56485 11.2082L13.3441 21.9428L10.7896 24.7468L1.01042 14.0122C0.452517 13.3998 0.452517 12.4069 1.01042 11.7945L1.54452 11.2082Z' fill='%23F85858'/%3E%3Cpath d='M28.1402 3.69485C28.6981 4.30726 28.6981 5.30016 28.1402 5.91257L10.982 24.7471L8.42761 21.9431L25.5858 3.10857C26.1437 2.49616 27.0482 2.49616 27.6061 3.10857L28.1402 3.69485Z' fill='%23F85858'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
   &__data {
     width: 580px;
     padding: 15px 0 3px;
+    display: flex;
+    flex-direction: column;
 
     &--coming {
       width: 60%;
@@ -89,7 +134,7 @@
   }
 
   &__price {
-    margin: 24px 0 36px;
+    margin-top: 24px;
     display: flex;
     line-height: 1;
 
@@ -136,6 +181,7 @@
   &__action {
     display: flex;
     align-items: center;
+    margin-top: auto;
 
     &--coming {
       flex-grow: 1;

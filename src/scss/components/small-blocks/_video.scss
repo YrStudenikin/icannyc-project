@@ -7,6 +7,10 @@
   background: url("../img/video-bg.png");
   @include bg-cover;
 
+  &--full {
+    height: 460px;
+  }
+
   &__btn {
     height: 150px;
     width: 150px;

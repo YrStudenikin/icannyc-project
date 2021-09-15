@@ -1,6 +1,7 @@
 .answers {
   padding: 40px 0 96px;
-  background: url("../img/answers/answers-bg.png");
+  //background: url("../img/answers/answers-bg.png");
+  background: $color-black;
   @include bg-cover;
 
   &__container {

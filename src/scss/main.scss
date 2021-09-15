@@ -23,7 +23,11 @@
 @import "components/small-blocks/created-by";
 @import "components/small-blocks/reviews-slider";
 @import "components/small-blocks/review-card";
-@import "components/small-blocks/_star-rating";
+@import "components/small-blocks/star-rating";
+@import "components/small-blocks/tabs";
+@import "components/small-blocks/typed";
+@import "components/small-blocks/modal";
+@import "components/small-blocks/contest-rules";
 
 // Big blocks
 @import "components/big-blocks/header";
@@ -39,3 +43,6 @@
 @import "components/big-blocks/reviews";
 @import "components/big-blocks/footer";
 @import "components/big-blocks/catalog";
+@import "components/big-blocks/course-intro";
+@import "components/big-blocks/speaker";
+@import "components/big-blocks/stages";

@@ -1,3 +1,9 @@
+@mixin media-min($width) {
+  @media (min-width: (#{$width}px)) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: (1025px)) {
     @content;

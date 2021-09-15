@@ -1,0 +1,120 @@
+.stages {
+  padding: 104px 0 130px;
+
+  &__container {
+    max-width: 1390px;
+  }
+
+  &__inner {
+    display: flex;
+    position: relative;
+    padding-bottom: 40px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 38px;
+      left: 33px;
+      height: 104px;
+      width: 1040px;
+      background-image: url("data:image/svg+xml,%3Csvg width='1054' height='105' viewBox='0 0 1054 105' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1048 0L1045.11 5L1050.89 5L1048 0ZM1048.5 102L1048.5 100.038L1047.5 100.038L1047.5 102L1048.5 102ZM1048.5 96.1154L1048.5 92.1923L1047.5 92.1923L1047.5 96.1154L1048.5 96.1154ZM1048.5 88.2692L1048.5 84.3462L1047.5 84.3462L1047.5 88.2692L1048.5 88.2692ZM1048.5 80.4231L1048.5 76.5L1047.5 76.5L1047.5 80.4231L1048.5 80.4231ZM1048.5 72.5769L1048.5 68.6538L1047.5 68.6538L1047.5 72.5769L1048.5 72.5769ZM1048.5 64.7308L1048.5 60.8077L1047.5 60.8077L1047.5 64.7308L1048.5 64.7308ZM1048.5 56.8846L1048.5 52.9615L1047.5 52.9615L1047.5 56.8846L1048.5 56.8846ZM1048.5 49.0385L1048.5 45.1154L1047.5 45.1154L1047.5 49.0385L1048.5 49.0385ZM1048.5 41.1923L1048.5 37.2692L1047.5 37.2692L1047.5 41.1923L1048.5 41.1923ZM1048.5 33.3462L1048.5 29.4231L1047.5 29.4231L1047.5 33.3462L1048.5 33.3462ZM1048.5 25.5L1048.5 21.5769L1047.5 21.5769L1047.5 25.5L1048.5 25.5ZM1048.5 17.6538L1048.5 13.7308L1047.5 13.7308L1047.5 17.6538L1048.5 17.6538ZM1048.5 9.80767L1048.5 5.88459L1047.5 5.88459L1047.5 9.80767L1048.5 9.80767ZM1048 0L1042.23 10L1053.77 10L1048 0ZM1049 102L1049 100.038L1047 100.038L1047 102L1049 102ZM1049 96.1154L1049 92.1923L1047 92.1923L1047 96.1154L1049 96.1154ZM1049 88.2692L1049 84.3462L1047 84.3462L1047 88.2692L1049 88.2692ZM1049 80.4231L1049 76.5L1047 76.5L1047 80.4231L1049 80.4231ZM1049 72.5769L1049 68.6538L1047 68.6538L1047 72.5769L1049 72.5769ZM1049 64.7308L1049 60.8077L1047 60.8077L1047 64.7308L1049 64.7308ZM1049 56.8846L1049 52.9615L1047 52.9615L1047 56.8846L1049 56.8846ZM1049 49.0385L1049 45.1154L1047 45.1154L1047 49.0385L1049 49.0385ZM1049 41.1923L1049 37.2692L1047 37.2692L1047 41.1923L1049 41.1923ZM1049 33.3462L1049 29.4231L1047 29.4231L1047 33.3462L1049 33.3462ZM1049 25.5L1049 21.5769L1047 21.5769L1047 25.5L1049 25.5ZM1049 17.6538L1049 13.7308L1047 13.7308L1047 17.6538L1049 17.6538ZM1049 9.80767L1049 5.88459L1047 5.88459L1047 9.80767L1049 9.80767Z' fill='white'/%3E%3Cline x1='1049' y1='104.5' x2='4.37115e-08' y2='104.5' stroke='white' stroke-dasharray='4 4'/%3E%3Cline x1='0.5' y1='13' x2='0.5' y2='104' stroke='white' stroke-dasharray='4 4'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__left {
+    width: 60%;
+    padding-right: 108px;
+  }
+
+  &__right {
+    width: 40%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__item-count {
+    padding-bottom: 110px;
+    padding-top: 25px;
+    margin-right: 60px;
+    position: relative;
+
+    &:not(.stages__item-count--last):before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      height: 102px;
+      width: 12px;
+      background: url("data:image/svg+xml,%3Csvg width='12' height='102' viewBox='0 0 12 102' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 102L8.88675 97L3.11324 97L6 102ZM5.5 -2.18557e-08L5.5 1.96154L6.5 1.96154L6.5 2.18557e-08L5.5 -2.18557e-08ZM5.5 5.88462L5.5 9.80769L6.5 9.80769L6.5 5.88462L5.5 5.88462ZM5.5 13.7308L5.5 17.6538L6.5 17.6538L6.5 13.7308L5.5 13.7308ZM5.5 21.5769L5.5 25.5L6.5 25.5L6.5 21.5769L5.5 21.5769ZM5.5 29.4231L5.5 33.3462L6.5 33.3462L6.5 29.4231L5.5 29.4231ZM5.5 37.2692L5.5 41.1923L6.5 41.1923L6.5 37.2692L5.5 37.2692ZM5.5 45.1154L5.5 49.0385L6.5 49.0385L6.5 45.1154L5.5 45.1154ZM5.5 52.9615L5.5 56.8846L6.5 56.8846L6.5 52.9615L5.5 52.9615ZM5.5 60.8077L5.5 64.7308L6.5 64.7308L6.5 60.8077L5.5 60.8077ZM5.5 68.6538L5.5 72.5769L6.5 72.5769L6.5 68.6538L5.5 68.6538ZM5.5 76.5L5.5 80.4231L6.5 80.4231L6.5 76.5L5.5 76.5ZM5.5 84.3462L5.5 88.2692L6.5 88.2692L6.5 84.3462L5.5 84.3462ZM5.5 92.1923L5.5 96.1154L6.5 96.1154L6.5 92.1923L5.5 92.1923ZM6 102L11.7735 92L0.226493 92L6 102ZM5 -4.37114e-08L5 1.96154L7 1.96154L7 4.37114e-08L5 -4.37114e-08ZM5 5.88462L5 9.80769L7 9.80769L7 5.88462L5 5.88462ZM5 13.7308L5 17.6538L7 17.6538L7 13.7308L5 13.7308ZM5 21.5769L5 25.5L7 25.5L7 21.5769L5 21.5769ZM5 29.4231L5 33.3462L7 33.3462L7 29.4231L5 29.4231ZM5 37.2692L5 41.1923L7 41.1923L7 37.2692L5 37.2692ZM5 45.1154L5 49.0385L7 49.0385L7 45.1154L5 45.1154ZM5 52.9615L5 56.8846L7 56.8846L7 52.9615L5 52.9615ZM5 60.8077L5 64.7308L7 64.7308L7 60.8077L5 60.8077ZM5 68.6538L5 72.5769L7 72.5769L7 68.6538L5 68.6538ZM5 76.5L5 80.4231L7 80.4231L7 76.5L5 76.5ZM5 84.3462L5 88.2692L7 88.2692L7 84.3462L5 84.3462ZM5 92.1923L5 96.1154L7 96.1154L7 92.1923L5 92.1923Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__item-count-val {
+    min-width: 70px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.6;
+    color: $color-yellow;
+    border: 3px solid $color-white;
+  }
+
+  &__item-title {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  &__present {
+    width: 540px;
+    height: 680px;
+    border-radius: 13px;
+    padding: 50px 42px;
+    background: url("../img/present-course-img.png");
+    @include bg-cover;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  &__present-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 128.2%;
+    color: $color-white;
+    margin-bottom: 40px;
+  }
+
+  &__contest-text {
+    position: absolute;
+    left: 100px;
+    bottom: -40px;
+    font-size: 24px;
+    color: $color-white;
+  }
+
+  &__contest-link {
+    font-size: 36px;
+    text-decoration-line: underline;
+    text-decoration-skip-ink: none;
+    font-weight: bold;
+    color: $color-red-dark;
+  }
+}

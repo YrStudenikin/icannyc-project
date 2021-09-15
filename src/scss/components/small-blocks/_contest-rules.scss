@@ -1,0 +1,14 @@
+.contest-rules {
+
+  &__title {
+    font-weight: 700;
+    font-size: 33px;
+    color: $color-white;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    line-height: 30px;
+    color: $color-white;
+  }
+}

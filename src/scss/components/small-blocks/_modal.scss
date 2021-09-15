@@ -1,0 +1,125 @@
+.modal {
+  position: relative;
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  &__container {
+    position: relative;
+    background: $color-black;
+    border-radius: 22px;
+    padding: 46px 62px 68px;
+    width: 675px;
+    max-height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    &--text {
+      width: 100%;
+      padding: 90px 80px;
+
+      @include media-min(1600) {
+        width: 1560px;
+      }
+    }
+  }
+
+  &__btn-close {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    &:hover svg {
+      transform: rotate(90deg);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $color-white;
+      transform: rotate(0deg);
+      transition: transform .25s;
+    }
+  }
+
+  &__content {
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal[aria-hidden="false"] .modal__overlay {
+  animation: fadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.modal[aria-hidden="false"] .modal__container {
+  animation: slideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.modal[aria-hidden="true"] .modal__overlay {
+  animation: fadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.modal[aria-hidden="true"] .modal__container {
+  animation: slideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.modal .modal__container,
+.modal .modal__overlay {
+  will-change: transform;
+}
+
+/*-- Modal Animations --*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(15%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideOut {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10%); }
+}

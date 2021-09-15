@@ -14,7 +14,21 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: $color-white;
-  background-color: var(--color-white);
+  background-color: $color-black;
+  overflow-x: hidden;
+
+  /*фикс прыжков страницы при overflow-hidden*/
+  margin-right: calc(-1 * (100vw - 100%));
+
+  &.hide-scroll {
+    overflow: hidden;
+  }
+}
+
+h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,
+textarea,p,blockquote,th,td{
+  margin:0;
+  padding:0;
 }
 
 img {
@@ -40,6 +54,7 @@ svg {fill: $color-white}
 
 .site-container {
   overflow: hidden;
+  //background-color: $color-black;
 }
 
 .is-hidden {
@@ -94,6 +109,6 @@ svg {fill: $color-white}
 }
 
 .page-bgtop {
-  background: url("../img/page-top-bg.png") center top;
+  background: url("../img/page-top-bg.png") no-repeat center top;
   background-size: contain;
 }

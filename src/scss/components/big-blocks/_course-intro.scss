@@ -1,0 +1,134 @@
+.course-intro {
+  padding-top: 80px;
+
+  &__container {
+    max-width: 1460px;
+  }
+
+  &__inner {
+    padding-bottom: 50px;
+  }
+
+  &__stat {
+    padding: 26px 0 64px;
+    display: flex;
+  }
+
+  &__places {
+    padding: 38px 46px;
+    background: $color-bg-blocks;
+    border-radius: 13px;
+  }
+
+  &__places-text {
+    font-size: 26px;
+    color: $color-white;
+  }
+
+  &__places-val {
+    font-size: 48px;
+    font-weight: 500;
+    color: $color-yellow;
+    margin-left: 26px;
+  }
+
+  &__places-sep {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 46px;
+    color: #3A3A3A;
+    margin: 0 30px;
+  }
+
+  &__purchased {
+    align-self: flex-start;
+    margin-left: 20px;
+    padding: 26px 60px;
+    background: $color-bg-blocks;
+    border-radius: 13px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__advantages {
+    padding: 45px 0 95px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__advantages-list {
+    width: 33.33333%;
+
+    &:nth-child(2) {
+      margin: 0 30px;
+    }
+  }
+
+  &__advantage-item {
+    position: relative;
+    font-size: 24px;
+    color: #ffffff;
+    padding-left: 54px;
+
+    @include not-last {
+      margin-bottom: 35px;
+    }
+
+    &:before {
+      content: "";
+      @include absolute-v-center;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background: url("data:image/svg+xml,%3Csvg width='30' height='29' viewBox='0 0 30 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14.5' cy='14.5' r='13.5' stroke='white' stroke-width='2'/%3E%3Cpath d='M1.54452 11.2082C2.10242 10.5958 3.00695 10.5958 3.56485 11.2082L13.3441 21.9428L10.7896 24.7468L1.01042 14.0122C0.452517 13.3998 0.452517 12.4069 1.01042 11.7945L1.54452 11.2082Z' fill='%23F85858'/%3E%3Cpath d='M28.1402 3.69485C28.6981 4.30726 28.6981 5.30016 28.1402 5.91257L10.982 24.7471L8.42761 21.9431L25.5858 3.10857C26.1437 2.49616 27.0482 2.49616 27.6061 3.10857L28.1402 3.69485Z' fill='%23F85858'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__btn-detail {
+    font-size: 22px;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    svg {
+      margin-top: 18px;
+      width: 44px;
+      height: 24px;
+      fill: $color-yellow;
+      animation: verticalSlide 2.5s 0s infinite;
+    }
+  }
+
+  &__collapse {
+
+  }
+
+  &__description {
+    background: $color-white;
+    padding: 70px 0 100px;
+  }
+
+  &__description-text {
+    font-size: 24px;
+    line-height: 140.7%;
+    color: $color-black;
+    margin-top: 40px;
+  }
+}
+
+
+@keyframes verticalSlide {
+  0% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}

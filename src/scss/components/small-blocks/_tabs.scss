@@ -1,0 +1,26 @@
+.tabs {
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+  }
+
+  &__nav-btn {
+    white-space: nowrap;
+    //flex-grow: 1;
+    max-width: 300px;
+    background: $color-white;
+    border-radius: 15px;
+    padding: 10px 35px;
+    margin: 0 4px 10px;
+    font-family: Cuprum, sans-serif;
+    font-size: 18px;
+    color: $color-black;
+    transition: $transition;
+
+    &:hover {
+      @include hover-btn-darken($color-white);
+    }
+  }
+}

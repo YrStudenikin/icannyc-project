@@ -46,7 +46,7 @@ class CountDown {
 
   complete() {
     if (typeof this.onComplete === 'function') {
-      onComplete();
+      this.onComplete();
     }
   }
 

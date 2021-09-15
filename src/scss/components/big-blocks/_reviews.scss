@@ -12,8 +12,8 @@
   }
 
   &__note {
-    width: 100%;
     margin-bottom: 38px;
+    margin-left: 28px;
     @include flex-v-center;
     justify-content: space-between;
 

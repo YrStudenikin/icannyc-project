@@ -1,8 +1,344 @@
 <div class="catalog">
   <div class="container catalog__container">
-    <div class="catalog__list">
-      <div class="block-title block-title--md">
-        Все программы
+    <div class="block-title block-title--md">
+      Все программы
+    </div>
+    <div class="tabs catalog__tabs">
+      <div class="tabs__head catalog__tabs-head">
+        <div class="tabs__nav">
+          <button class="btn tabs__nav-btn">Дизайн</button>
+          <button class="btn tabs__nav-btn">Музыка</button>
+          <button class="btn tabs__nav-btn">Программирование</button>
+          <button class="btn tabs__nav-btn">Ландшафт</button>
+          <button class="btn tabs__nav-btn">Видео</button>
+          <button class="btn tabs__nav-btn">Анимация</button>
+          <button class="btn tabs__nav-btn">Популярное</button>
+          <button class="btn tabs__nav-btn">Скоро в продаже</button>
+        </div>
+      </div>
+      <div class="tabs__content catalog__list">
+        <div class="course-card">
+          <img class="course-card__preview" src="img/course-card/aoki.png" alt="">
+          <div class="course-card__inner course-card__inner--two-col">
+            <div class="course-card__advantages">
+              <div class="course-card__advantages-title">Что ты получишь?</div>
+              <div class="course-card__advantages-list">
+                <div class="course-card__advantages-item">Шанс выграть $5000</div>
+                <div class="course-card__advantages-item">Финансовую независимость</div>
+                <div class="course-card__advantages-item">Повышение заработка</div>
+              </div>
+            </div>
+            <div class="course-card__data">
+              <div class="course-card__header">
+                <div class="course-card__name">Курс диджеинга</div>
+                <div class="course-card__rating">
+                  <span class="course-card__rating-val">4.9</span>
+                  <svg class="course-card__rating-star">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="countdown course-card__countdown" data-date-end="2021-09-15T18:43:00">
+                <div class="countdown__title course-card__countdown-title">
+                  До конца <span class="color-yellow">акции</span>!
+                </div>
+                <div class="countdown__wrapper">
+                  <div class="countdown__block" data-unit="hours">
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">1</span>
+                    </div>
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">2</span>
+                    </div>
+                    <span class="countdown__unit-name">Часов</span>
+                  </div>
+                  <div class="countdown__spacer">:</div>
+                  <div class="countdown__block" data-unit="minutes">
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">5</span>
+                    </div>
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">2</span>
+                    </div>
+                    <span class="countdown__unit-name">Минут</span>
+                  </div>
+                  <div class="countdown__spacer">:</div>
+                  <div class="countdown__block" data-unit="seconds">
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">5</span>
+                    </div>
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">2</span>
+                    </div>
+                    <span class="countdown__unit-name">Секунд</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card__price">
+                <span class="course-card__price-text color-red">Всего:</span>
+                <span class="course-card__price-val">$28</span>
+                <span class="course-card__price-val-old">$99</span>
+              </div>
+              <div class="course-card__action">
+                <button class="btn btn--default btn--dark course-card__btn course-card__btn--more">
+                  Подробнее
+                </button>
+                <button class="btn btn--default btn--red-light course-card__btn">
+                  Купить курс
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="course-card__label course-card__label--new">
+            Новое
+          </div>
+          <div class="course-card__likes">
+            <svg class="course-card__likes-icon">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+            <span class="course-card__likes-count">146</span>
+          </div>
+        </div>
+        <div class="course-card">
+          <img class="course-card__preview" src="img/course-card/aoki.png" alt="">
+          <div class="course-card__inner course-card__inner--two-col">
+            <div class="course-card__advantages">
+              <div class="course-card__advantages-title">Что ты получишь?</div>
+              <div class="course-card__advantages-list">
+                <div class="course-card__advantages-item">Шанс выграть $5000</div>
+                <div class="course-card__advantages-item">Финансовую независимость</div>
+                <div class="course-card__advantages-item">Повышение заработка</div>
+              </div>
+            </div>
+            <div class="course-card__data">
+              <div class="course-card__header">
+                <div class="course-card__name">Интенсив дизайна</div>
+                <div class="course-card__rating">
+                  <span class="course-card__rating-val">4.9</span>
+                  <svg class="course-card__rating-star">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="course-card__description">
+                Et harum quidem rerum facilis est et expedita distinctio, nam libero tempore, cum soluta nobis est
+                eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas
+                assumenda est, omnis dolor repellendus! Duis aute irure dolor in reprehenderit in voluptate, quis
+                nostrum
+              </div>
+              <div class="course-card__price">
+                <span class="course-card__price-text color-red">Всего:</span>
+                <span class="course-card__price-val">$28</span>
+              </div>
+              <div class="course-card__action">
+                <button class="btn btn--default btn--dark course-card__btn course-card__btn--more">
+                  Подробнее
+                </button>
+                <button class="btn btn--default btn--red-light course-card__btn">
+                  Купить курс
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="course-card__label course-card__label--new">
+            Новое
+          </div>
+          <div class="course-card__likes">
+            <svg class="course-card__likes-icon">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+            <span class="course-card__likes-count">146</span>
+          </div>
+        </div>
+        <div class="course-card">
+          <img class="course-card__preview" src="img/course-card/aoki.png" alt="">
+          <div class="course-card__inner course-card__inner--two-col">
+            <div class="course-card__advantages">
+              <div class="course-card__advantages-title">Что ты получишь?</div>
+              <div class="course-card__advantages-list">
+                <div class="course-card__advantages-item">Шанс выграть $5000</div>
+                <div class="course-card__advantages-item">Финансовую независимость</div>
+                <div class="course-card__advantages-item">Повышение заработка</div>
+              </div>
+            </div>
+            <div class="course-card__data">
+              <div class="course-card__header">
+                <div class="course-card__name">Курс диджеинга</div>
+                <div class="course-card__rating">
+                  <span class="course-card__rating-val">4.9</span>
+                  <svg class="course-card__rating-star">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="countdown course-card__countdown" data-date-end="2021-09-15T18:43:00">
+                <div class="countdown__title course-card__countdown-title">
+                  До конца <span class="color-yellow">акции</span>!
+                </div>
+                <div class="countdown__wrapper">
+                  <div class="countdown__block" data-unit="hours">
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">1</span>
+                    </div>
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">2</span>
+                    </div>
+                    <span class="countdown__unit-name">Часов</span>
+                  </div>
+                  <div class="countdown__spacer">:</div>
+                  <div class="countdown__block" data-unit="minutes">
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">5</span>
+                    </div>
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">2</span>
+                    </div>
+                    <span class="countdown__unit-name">Минут</span>
+                  </div>
+                  <div class="countdown__spacer">:</div>
+                  <div class="countdown__block" data-unit="seconds">
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">5</span>
+                    </div>
+                    <div class="countdown__item">
+                      <span class="countdown__item-val">2</span>
+                    </div>
+                    <span class="countdown__unit-name">Секунд</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card__price">
+                <span class="course-card__price-text color-red">Всего:</span>
+                <span class="course-card__price-val">$28</span>
+                <span class="course-card__price-val-old">$99</span>
+              </div>
+              <div class="course-card__action">
+                <button class="btn btn--default btn--dark course-card__btn course-card__btn--more">
+                  Подробнее
+                </button>
+                <button class="btn btn--default btn--red-light course-card__btn">
+                  Купить курс
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="course-card__label course-card__label--new">
+            Новое
+          </div>
+          <div class="course-card__likes">
+            <svg class="course-card__likes-icon">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+            <span class="course-card__likes-count">146</span>
+          </div>
+        </div>
+        <div class="course-card">
+          <img class="course-card__preview" src="img/course-card/aoki.png" alt="">
+          <div class="course-card__inner course-card__inner--two-col">
+            <div class="course-card__advantages">
+              <div class="course-card__advantages-title">Что ты получишь?</div>
+              <div class="course-card__advantages-list">
+                <div class="course-card__advantages-item">Шанс выграть $5000</div>
+                <div class="course-card__advantages-item">Финансовую независимость</div>
+                <div class="course-card__advantages-item">Повышение заработка</div>
+              </div>
+            </div>
+            <div class="course-card__data">
+              <div class="course-card__header">
+                <div class="course-card__name">Интенсив дизайна</div>
+                <div class="course-card__rating">
+                  <span class="course-card__rating-val">4.9</span>
+                  <svg class="course-card__rating-star">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="course-card__description">
+                Et harum quidem rerum facilis est et expedita distinctio, nam libero tempore, cum soluta nobis est
+                eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas
+                assumenda est, omnis dolor repellendus! Duis aute irure dolor in reprehenderit in voluptate, quis
+                nostrum
+              </div>
+              <div class="course-card__price">
+                <span class="course-card__price-text color-red">Всего:</span>
+                <span class="course-card__price-val">$28</span>
+              </div>
+              <div class="course-card__action">
+                <button class="btn btn--default btn--dark course-card__btn course-card__btn--more">
+                  Подробнее
+                </button>
+                <button class="btn btn--default btn--red-light course-card__btn">
+                  Купить курс
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="course-card__label course-card__label--new">
+            Новое
+          </div>
+          <div class="course-card__likes">
+            <svg class="course-card__likes-icon">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+            <span class="course-card__likes-count">146</span>
+          </div>
+        </div>
+        <div class="course-card course-card--coming">
+          <img class="course-card__preview" src="img/course-card/aoki.png" alt="">
+          <div class="course-card__inner course-card__inner--coming">
+            <div class="course-card__data course-card__data--coming">
+              <div class="course-card__header course-card__header--coming">
+                <div class="course-card__name">Курс диджеинга</div>
+              </div>
+              <div class="course-card__release-info">СКОРО В ПРОДАЖЕ</div>
+              <div class="course-card__price course-card__price--coming">
+                <span class="course-card__price-val">$28</span>
+              </div>
+            </div>
+            <div class="course-card__action course-card__action--coming">
+              <button class="btn btn--default btn--yellow course-card__btn">
+                Скоро в продаже
+              </button>
+            </div>
+          </div>
+          <div class="course-card__label course-card__label--new">
+            Новое
+          </div>
+          <div class="course-card__likes">
+            <svg class="course-card__likes-icon">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+            <span class="course-card__likes-count">146</span>
+          </div>
+        </div>
+        <div class="course-card course-card--coming">
+          <img class="course-card__preview" src="img/course-card/aoki.png" alt="">
+          <div class="course-card__inner course-card__inner--coming">
+            <div class="course-card__data course-card__data--coming">
+              <div class="course-card__header course-card__header--coming">
+                <div class="course-card__name">Курс диджеинга</div>
+              </div>
+              <div class="course-card__release-info">СКОРО В ПРОДАЖЕ</div>
+              <div class="course-card__price course-card__price--coming">
+                <span class="course-card__price-val">$28</span>
+              </div>
+            </div>
+            <div class="course-card__action course-card__action--coming">
+              <button class="btn btn--default btn--yellow course-card__btn">
+                Скоро в продаже
+              </button>
+            </div>
+          </div>
+          <div class="course-card__label course-card__label--new">
+            Новое
+          </div>
+          <div class="course-card__likes">
+            <svg class="course-card__likes-icon">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+            <span class="course-card__likes-count">146</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
