@@ -4,6 +4,13 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -4px;
+
+    &--catalog {
+      @include media-max(767.98) {
+        justify-content: center;
+        padding-bottom: 20px;
+      }
+    }
   }
 
   &__nav-btn {
@@ -19,8 +26,18 @@
     color: $color-black;
     transition: $transition;
 
+    @include media-max(768) {
+      display: none;
+    }
+
     &:hover {
       @include hover-btn-darken($color-white);
+    }
+
+    &--mob {
+      @include media-max(767.98) {
+        display: block;
+      }
     }
   }
 }

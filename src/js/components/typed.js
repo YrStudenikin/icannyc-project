@@ -11,4 +11,6 @@ let options = {
   loop: true,
 };
 
-let typedHero = new Typed('.typed', options);
+if (document.querySelector('.typed')) {
+  const typedHero = new Typed('.typed', options);
+}

@@ -6,6 +6,10 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+
+  @include tablet {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 body {
@@ -15,20 +19,35 @@ body {
   font-size: 20px;
   color: $color-white;
   background-color: $color-black;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 
-  /*фикс прыжков страницы при overflow-hidden*/
-  margin-right: calc(-1 * (100vw - 100%));
+  @include media-max(1240) {
+    font-size: 18px;
+  }
+
+  @include media-max(992) {
+    font-size: 16px;
+  }
+
+  @include media-max(767.98) {
+    font-size: 14px;
+  }
+
+  &.body-lock {
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+  }
 
   &.hide-scroll {
     overflow: hidden;
   }
 }
 
-h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,
-textarea,p,blockquote,th,td{
-  margin:0;
-  padding:0;
+h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input,
+textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -50,23 +69,18 @@ ul {
   margin: 0;
 }
 
-svg {fill: $color-white}
+svg {
+  fill: $color-white
+}
 
 .site-container {
-  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden;
   //background-color: $color-black;
 }
 
 .is-hidden {
   display: none !important;
-}
-
-.for-mobile {
-  display: none;
-
-  @include mobile {
-    display: block;
-  }
 }
 
 .error {
@@ -83,12 +97,36 @@ svg {fill: $color-white}
   line-height: 122.7%;
   color: $color-white;
 
+  @include media-max(1240) {
+    font-size: 40px;
+  }
+
+  @include media-max(767.98) {
+    font-size: 24px;
+  }
+
   &--md {
     font-size: 40px;
+
+    @include media-max(1240) {
+      font-size: 30px;
+    }
+
+    @include media-max(767.98) {
+      font-size: 24px;
+    }
   }
 
   &--sm {
     font-size: 36px;
+
+    @include media-max(1240) {
+      font-size: 26px;
+    }
+
+    @include media-max(767.98) {
+      font-size: 24px;
+    }
   }
 
   &--black {
@@ -97,11 +135,20 @@ svg {fill: $color-white}
 
   &--space {
     margin-left: 28px;
+
+    @include media-max(767.98) {
+      margin-left: 0;
+    }
   }
 }
 
-.color-yellow {color: $color-yellow}
-.color-red {color: $color-red-light}
+.color-yellow {
+  color: $color-yellow
+}
+
+.color-red {
+  color: $color-red-light
+}
 
 .text-underline {
   text-decoration: underline;
@@ -111,4 +158,9 @@ svg {fill: $color-white}
 .page-bgtop {
   background: url("../img/page-top-bg.png") no-repeat center top;
   background-size: contain;
+
+  @include media-max(767.98) {
+    background: url("../img/page-top-bg-mob.png") no-repeat center top;
+    background-size: contain;
+  }
 }

@@ -8,19 +8,8 @@ function toggleAccordion() {
   }
 
   if (itemToggle === 'false') {
-    // let thisCollapse = this.parentNode.querySelector('.accordion__collapse');
-
-    // collapsing(thisCollapse);
     this.setAttribute('aria-expanded', 'true');
   }
-}
-
-function collapsing(elCollapse) {
-  elCollapse.classList.add('accordion__collapse--collapsing');
-  let thisBody = elCollapse.querySelector('.accordion__body');
-  let bodyHeight = thisBody.clientHeight;
-  console.log(bodyHeight);
-
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));

@@ -8,6 +8,11 @@
     background: url("../img/hero-bg.png");
     @include bg-cover;
     z-index: -1;
+
+    @include media-max(767.98) {
+      background: url("../img/hero/hero-bg-mob.png");
+      @include bg-cover;
+    }
   }
 
   &:after {
@@ -16,11 +21,30 @@
     transform: rotate(-180deg);
     z-index: -1;
   }
+
+  &__socials {
+    display: flex;
+  }
 }
 
 .hero-intro {
   padding-top: 200px;
   padding-bottom: 92px;
+
+  @include media-max(1240) {
+    padding-top: 140px;
+    padding-bottom: 50px;
+  }
+
+  @include media-max(767.98) {
+    padding-bottom: 10px;
+  }
+
+  &__container {
+    @include media-max(767.98) {
+      padding: 0 10px;
+    }
+  }
 
   &__title {
     font-weight: 700;
@@ -29,6 +53,33 @@
     color: $color-white;
     margin: 0 0 35px 0;
     min-height: 120px;
+
+    @include media-max(1240) {
+      font-size: 44px;
+    }
+
+    @include tablet {
+      font-size: 33px;
+      min-height: 90px;
+      margin: 0 0 25px 0;
+    }
+
+    @include media-max(767.98) {
+      text-align: center;
+      font-size: 29px;
+      min-height: 110px;
+      margin: 0;
+    }
+
+    @include media-max(500) {
+      font-size: 25px;
+      min-height: 100px;
+    }
+
+    @include media-max(414) {
+      font-size: 22px;
+      min-height: 90px;
+    }
   }
 
   &__buy {
@@ -37,6 +88,10 @@
     justify-content: center;
     align-items: center;
     max-width: max-content;
+
+    @include media-max(767.98) {
+      display: none;
+    }
   }
 
   &__btn {
@@ -56,6 +111,11 @@
   display: flex;
   position: relative;
 
+  @include media-max(992) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -66,36 +126,126 @@
     background: $color-black;
     height: 125px;
     z-index: -1;
+
+    @include media-max(992) {
+      height: 165px;
+    }
   }
 
   &__right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-right: 80px;
+
+    @include tablet {
+      padding-right: 15px;
+    }
+
+    @include media-max(992) {
+      align-items: center;
+      padding-right: 0;
+      padding-top: 50px;
+    }
   }
 }
 
 .hero-team {
   display: flex;
+  align-items: flex-end;
   overflow-x: hidden;
-  border-top-right-radius: 19px;
-  border-bottom-right-radius: 19px;
   margin-right: 115px;
 
+  @include media-max(1240) {
+    margin-right: 50px;
+    width: 60%;
+  }
+
+  @include media-max(992) {
+    margin-right: 0;
+    width: 100%;
+  }
+
   &__photo {
-    width: 190px;
+    width: 14.28571%;
     height: 450px;
     display: block;
+
+    &:nth-child(7) {
+      border-top-right-radius: 19px;
+      border-bottom-right-radius: 19px;
+    }
+
+    @include media-max(1600) {
+      height: 100%;
+    }
+
+    @include media-max(1240) {
+      width: 20%;
+      height: 260px;
+
+      &:nth-child(5) {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      &:nth-child(7),
+      &:nth-child(6) {
+        display: none;
+      }
+    }
+
+    @include media-max(992) {
+      height: 370px;
+
+      &:nth-child(5) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    @include media-max(767.98) {
+      height: 230px;
+    }
+
+    @include media-max(500) {
+      height: 200px;
+    }
+
+    @include media-max(400) {
+      height: 160px;
+    }
   }
 }
 
 .hero-stat {
-  padding-top: 40px;
+  padding: 40px 0 20px;
+
+  @include media-max(992) {
+    display: flex;
+    padding: 0 0 40px;
+  }
+
+  @include media-max(767.98) {
+    display: none;
+  }
 
   &__item {
+    @include media-max(992) {
+      text-align: center;
+    }
 
     &:not(:last-child) {
       padding-bottom: 20px;
+
+      @include media-max(1240) {
+        padding-bottom: 14px;
+      }
+
+      @include media-max(992) {
+        padding-bottom: 0;
+        padding-right: 30px;
+      }
     }
 
     &-title {
@@ -103,6 +253,10 @@
       line-height: 122.7%;
       font-weight: 400;
       color: $color-white;
+
+      @include media-max(1240) {
+        font-size: 34px;
+      }
     }
 
     &-subtitle {
@@ -110,5 +264,40 @@
       line-height: 18px;
       color: #ADADAD;
     }
+  }
+}
+
+.hero-mail {
+  display: none;
+  max-width: 320px;
+  margin-bottom: 45px;
+  padding: 0 10px;
+
+  @include media-max(767.98) {
+    display: block;
+  }
+
+  &__title {
+    font-size: 16px;
+    text-align: center;
+    color: #CACACA;
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-input {
+    margin-bottom: 10px;
+    height: 40px;
+    font-size: 18px;
+    padding: 7px 20px;
+  }
+
+  &__form-btn {
+    padding: 12px 20px;
+    margin-bottom: 20px;
   }
 }

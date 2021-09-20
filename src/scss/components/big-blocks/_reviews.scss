@@ -1,10 +1,19 @@
 .reviews {
-  height: 840px;
   padding: 40px 0 96px;
   background: $color-black;
 
+  @include media-max(992) {
+    padding: 40px 0 130px;
+    position: relative;
+  }
+
   &__container {
     max-width: 1520px;
+    padding: 0 60px;
+
+    @include media-max(450) {
+      padding: 0 15px;
+    }
   }
 
   &__title {
@@ -17,6 +26,11 @@
     @include flex-v-center;
     justify-content: space-between;
 
+    @include media-max(767.98) {
+      margin-bottom: 30px;
+      margin-left: 0;
+    }
+
     & > * {
       @include flex-v-center;
     }
@@ -26,12 +40,31 @@
     font-family: Cuprum, sans-serif;
     font-size: 24px;
     color: #525252;
+
+    @include media-max(540) {
+      font-size: 14px;
+    }
+  }
+
+  &__more {
+    @include media-max(992) {
+      @include absolute-h-center;
+      bottom: 15px;
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   &__more-text {
     font-size: 22px;
     color: #848484;
     margin-right: 30px;
+
+
+    @include media-max(540) {
+      font-size: 14px;
+      margin-right: 10px;
+    }
   }
 
   &__more-link {
@@ -39,6 +72,14 @@
     height: 36px;
     @include not-last {
       margin-right: 23px;
+    }
+
+    @include media-max(540) {
+      height: 27px;
+
+      @include not-last {
+        margin-right: 15px;
+      }
     }
   }
 
@@ -49,12 +90,33 @@
     height: 100%;
     transition: $transition;
 
+    @include media-max(540) {
+      width: 27px;
+    }
+
     &:hover {
       fill: $color-yellow;
     }
 
     &--vk {
       width: 45px;
+    }
+  }
+
+  &__slide-hint {
+    white-space: nowrap;
+    @include absolute-h-center;
+    bottom: 75px;
+    @include flex-v-center;
+    font-size: 16px;
+    display: none;
+
+    @include media-max(992) {
+      display: flex;
+    }
+
+    img {
+      margin-left: 8px;
     }
   }
 }

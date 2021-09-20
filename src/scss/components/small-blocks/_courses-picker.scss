@@ -5,6 +5,10 @@
   margin-left: -10px;
   margin-right: -10px;
   padding: 50px 0 120px;
+
+  @include media-max(992) {
+    padding: 40px 0 60px;
+  }
 }
 
 input[type=checkbox] {
@@ -22,6 +26,18 @@ input[type=checkbox] {
   transform: scale(1);
   transition: 200ms ease-in-out;
   user-select: none;
+
+  @include media-max(1240) {
+    width: 33.333333%;
+  }
+
+  @include media-max(992) {
+    width: 50%;
+  }
+
+  @include media-max(767.98) {
+    width: 100%;
+  }
 
   &:active {
     transform: scale(0.96);

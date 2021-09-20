@@ -36,6 +36,11 @@
     transition: $transition;
     position: relative;
 
+    @include media-max(767.98) {
+      width: 15px;
+      height: 15px;
+    }
+
     &:before {
       content: "";
       position: absolute;
@@ -47,6 +52,10 @@
       transform: scale(1.1);
       transition: $transition;
       opacity: 0;
+
+      @include media-max(767.98) {
+        background-size: 18px;
+      }
     }
   }
 
@@ -58,10 +67,22 @@
     }
   }
 
+  &__icon--red {
+    border: 1px solid #444444;
+
+    &:before {
+      background-image: url("data:image/svg+xml,%3Csvg width='25' height='18' viewBox='0 0 25 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06043 7.18844C1.64622 6.60265 2.59597 6.60265 3.18175 7.18844L11.0811 15.0878L8.95977 17.2091L1.06043 9.30976C0.474646 8.72397 0.474647 7.77422 1.06043 7.18844Z' fill='%23F85858'/%3E%3Cpath d='M23.1483 1.06065C23.7341 1.64643 23.7341 2.59618 23.1483 3.18197L9.12117 17.2091L6.99985 15.0878L21.027 1.06065C21.6128 0.47486 22.5625 0.474861 23.1483 1.06065Z' fill='%23F85858'/%3E%3C/svg%3E%0A");
+    }
+  }
+
   &__text {
     font-family: Cuprum, sans-serif;
     font-size: 14px;
     color: #717171;
+
+    @include media-max(767.98) {
+      font-size: 12px;
+    }
 
     a {
       color: #717171;
@@ -69,6 +90,10 @@
 
     &--inline {
       margin-left: 15px;
+
+      @include media-max(767.98) {
+        margin-left: 8px;
+      }
     }
   }
 }

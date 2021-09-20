@@ -1,4 +1,4 @@
-<!-- Conditions modal -->
+<!-- Модалка условия -->
 <div class="modal" id="conditions-modal" aria-hidden="true">
   <div class="modal__overlay">
     <div class="modal__container modal__container--text">
@@ -27,6 +27,75 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Conditions modal end -->
+
+<!-- Модалка оплаты -->
+<div class="modal" id="buying-form-modal" aria-hidden="true">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <button class="btn modal__btn-close">
+        <svg>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <form action="" class="buying-form">
+          <div class="buying-form__row">
+            <input
+              class="input input--decor buying-form__input"
+              type="text" name="name"
+              id="buying-form-name"
+              required>
+            <label class="buying-form__label" for="buying-form-name">
+              Введите Ф.И.О <span class="color-red">&nbsp;*</span>
+            </label>
+          </div>
+          <div class="buying-form__row">
+            <input
+              class="input input--decor buying-form__input buying-form__input--tooltip"
+              type="email"
+              name="email"
+              id="buying-form-email"
+              required>
+            <label class="buying-form__label" for="buying-form-email">
+              Введите e-mail <span class="color-red">&nbsp;*</span>
+            </label>
+            <button class="btn tooltip-btn" type="button" id="tooltip">
+              <span class="tooltip-btn__icon">?</span>
+              <span class="tooltip-btn__content">
+                На Ваш e-mail поступит письмо с доступом к курсу <br/>
+                Пожалуйста вводите адрес электронной почты верно!
+              </span>
+            </button>
+          </div>
+          <div class="buying-form__row">
+            <input
+              class="input input--decor buying-form__input"
+              type="text"
+              name="tg"
+              id="buying-form-tg"
+              required>
+            <label class="buying-form__label" for="buying-form-tg">
+              Введите ник telegram <span class="color-red">&nbsp;*</span>
+            </label>
+          </div>
+          <label class="custom-checkbox buying-form__checkbox" for="buying-form-confirm">
+            <input type="checkbox" name="mail-chimp" id="buying-form-confirm">
+            <div class="custom-checkbox__inner custom-checkbox__inner--inline">
+              <span class="custom-checkbox__icon custom-checkbox__icon--red"></span>
+              <span class="custom-checkbox__text custom-checkbox__text--inline">
+                Я принимаю <a class="text-underline" href="#">политику</a> конфиденциальности сайта
+              </span>
+            </div>
+          </label>
+          <button class="btn btn--default btn--yellow buying-form__btn" type="submit">
+            <span>Оплатить</span>
+          </button>
+        </form>
       </div>
     </div>
   </div>

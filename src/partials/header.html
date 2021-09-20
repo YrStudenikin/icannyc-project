@@ -2,22 +2,42 @@
   <div class="container container--header">
     <div class="header__inner">
       <div class="header__left">
-        <a class="logo header__logo">
+        <a class="logo header__logo" href="/">
           <img class="header__logo-img" src="img/logo.svg" alt="">
         </a>
+
+        <div class="menu-burger" id="burger-menu">
+          <span class="menu-burger__el"></span>
+        </div>
+
+        <div class="menu-mobile" id="mobile-menu">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="/all-courses.html">Все курсы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link js-open-modal" data-modal="conditions-modal">Конкурс</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="javascript:void(0)">Контакты</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="javascript:void(0)">Поиск</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
       </div>
       <div class="header__right">
         <nav class="nav header__nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#">
-                Все курсы
-                <svg class="nav__item-arrow">
-                  <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-                </svg>
-              </a>
+              <a class="nav__link" href="/all-courses.html">Все курсы</a>
             </li>
-            <li class="nav__item"><a class="nav__link" href="#">Конкурс</a></li>
+            <li class="nav__item"><a class="nav__link js-open-modal" href="#" data-modal="conditions-modal">Конкурс</a>
+            </li>
             <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Поиск</a></li>
           </ul>
@@ -26,7 +46,7 @@
         <div class="player">
           <button class="btn player__btn">
             <svg class="player__btn-icon">
-            <use xlink:href="img/sprite.svg#pause"></use>
+              <use xlink:href="img/sprite.svg#pause"></use>
             </svg>
           </button>
           <span class="player__name">
@@ -39,6 +59,12 @@
             <button class="btn language__btn">
               <span class="language__active-name">RU</span>
             </button>
+            <div class="language__list-wrapper">
+              <div class="language__list">
+                <button class="btn language__list-btn" disabled>RU</button>
+                <button class="btn language__list-btn">EN</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

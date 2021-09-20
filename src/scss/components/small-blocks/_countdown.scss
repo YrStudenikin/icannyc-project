@@ -1,6 +1,4 @@
 .countdown {
-  $item-margin: 6px;
-  $item-width: 61px;
 
   &__title {
     font-family: Cuprum, sans-serif;
@@ -8,6 +6,11 @@
     font-size: 36px;
     color: $color-white;
     margin-bottom: 14px;
+
+    @include media-max(1024) {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
   }
 
   &__wrapper {
@@ -16,24 +19,44 @@
   }
 
   &__block {
-    width: calc(#{$item-width} * 2 + #{$item-margin});
+    width: calc(61px * 2 + 6px);
     display: flex;
     flex-wrap: wrap;
 
+    @include media-max(1024) {
+      width: calc(34px * 2 + 4px);
+    }
+
     .countdown__item:first-child {
       margin-right: 6px;
+
+      @include media-max(1024) {
+        margin-right: 4px;
+      }
     }
   }
 
   &__item {
     width: 61px;
     height: 75px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #1d1d1d;
     border-radius: 5px;
 
+    @include media-max(1024) {
+      width: 34px;
+      height: 42px;
+    }
+
     &-val {
       font-size: 64px;
+      line-height: 1;
+
+      @include media-max(1024) {
+        font-size: 32px;
+      }
     }
   }
 
@@ -41,6 +64,12 @@
     font-size: 64px;
     width: 18px;
     margin: 0 5px;
+
+    @include media-max(1024) {
+      font-size: 34px;
+      width: initial;
+      margin: 0 3px;
+    }
   }
 
   &__unit-name {
@@ -49,5 +78,10 @@
     text-transform: capitalize;
     font-size: 24px;
     margin-top: 7px;
+
+    @include media-max(1024) {
+      font-size: 13px;
+      margin-top: 5px;
+    }
   }
 }

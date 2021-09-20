@@ -4,11 +4,18 @@
   cursor: pointer;
 
   &--default {
+    display: block;
+    text-align: center;
     border-radius: 10px;
     padding: 17px 90px;
     font-family: "Cuprum", sans-serif;
     font-size: 22px;
     transition: $transition;
+
+    @include media-max(1240) {
+      padding: 15px 60px;
+      font-size: 20px;
+    }
   }
 
   &--yellow {
@@ -50,15 +57,60 @@
   &--icon {
     padding: 17px 32px 17px 48px;
     @include flex-v-center;
+    display: flex !important;
     justify-content: space-between;
 
     svg {
       width: 33px;
       height: 28px;
+
+      @include media-max(767.98) {
+        width: 25px;
+        height: 20px;
+      }
     }
   }
 
   &--center {
     text-align: center;
+  }
+
+  &--blinking {
+    position: relative;
+    overflow: hidden;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: -50px;
+      left: -50px;
+      transform: rotate(45deg);
+      height: 200px;
+      width: 30px;
+      background-color: $color-white;
+      transition: all 0.1s;
+      animation: slide 4s ease-in-out 0.05s infinite;
+    }
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    left: -70px;
+    margin-left: 0;
+  }
+  25% {
+    left: 110%;
+    margin-left: 80px;
+  }
+  100% {
+    left: 110%;
+    margin-left: 80px;
   }
 }

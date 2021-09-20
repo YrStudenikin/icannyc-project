@@ -1,6 +1,10 @@
 .course-intro {
   padding-top: 80px;
 
+  @include media-max(767.98) {
+    padding-top: 50px;
+  }
+
   &__container {
     max-width: 1460px;
   }
@@ -12,17 +16,48 @@
   &__stat {
     padding: 26px 0 64px;
     display: flex;
+
+    @include media-max(1200) {
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    @include media-max(767.98) {
+      padding: 20px 0 30px;
+    }
   }
 
   &__places {
     padding: 38px 46px;
     background: $color-bg-blocks;
     border-radius: 13px;
+    display: flex;
+
+    @include media-max(1200) {
+      flex-direction: column;
+      text-align: center;
+      padding: 0 46px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__places-block {
+    @include media-max(1200) {
+      padding: 20px 0;
+      &:first-child {
+        border-bottom: 1px solid #282A31;
+      }
+    }
   }
 
   &__places-text {
     font-size: 26px;
     color: $color-white;
+
+    @include media-max(767.98) {
+      font-size: 22px;
+    }
   }
 
   &__places-val {
@@ -30,6 +65,11 @@
     font-weight: 500;
     color: $color-yellow;
     margin-left: 26px;
+
+    @include media-max(767.98) {
+      font-size: 36px;
+      margin-left: 16px;
+    }
   }
 
   &__places-sep {
@@ -38,6 +78,10 @@
     line-height: 46px;
     color: #3A3A3A;
     margin: 0 30px;
+
+    @include media-max(1200) {
+      display: none;
+    }
   }
 
   &__purchased {
@@ -48,12 +92,26 @@
     border-radius: 13px;
     font-size: 24px;
     font-weight: 500;
+
+    @include media-max(1200) {
+      margin:  0;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include media-max(767.98) {
+      font-size: 18px;
+    }
   }
 
   &__advantages {
     padding: 45px 0 95px;
     display: flex;
     justify-content: space-between;
+
+    @include media-max(767.98) {
+      display: none;
+    }
   }
 
   &__advantages-list {
@@ -74,6 +132,15 @@
       margin-bottom: 35px;
     }
 
+    @include media-max(992) {
+      font-size: 18px;
+      padding-left: 30px;
+
+      @include not-last {
+        margin-bottom: 20px;
+      }
+    }
+
     &:before {
       content: "";
       @include absolute-v-center;
@@ -83,6 +150,18 @@
       background: url("data:image/svg+xml,%3Csvg width='30' height='29' viewBox='0 0 30 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14.5' cy='14.5' r='13.5' stroke='white' stroke-width='2'/%3E%3Cpath d='M1.54452 11.2082C2.10242 10.5958 3.00695 10.5958 3.56485 11.2082L13.3441 21.9428L10.7896 24.7468L1.01042 14.0122C0.452517 13.3998 0.452517 12.4069 1.01042 11.7945L1.54452 11.2082Z' fill='%23F85858'/%3E%3Cpath d='M28.1402 3.69485C28.6981 4.30726 28.6981 5.30016 28.1402 5.91257L10.982 24.7471L8.42761 21.9431L25.5858 3.10857C26.1437 2.49616 27.0482 2.49616 27.6061 3.10857L28.1402 3.69485Z' fill='%23F85858'/%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
       background-position: center;
+      background-size: contain;
+
+      @include media-max(992) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__title {
+    @include media-max(767.98) {
+      display: none;
     }
   }
 
@@ -94,22 +173,45 @@
     align-items: center;
     margin: 0 auto;
 
+    &[aria-expanded="true"] {
+
+      svg {
+        transform: rotate(180deg);
+      }
+  }
+
     svg {
       margin-top: 18px;
       width: 44px;
       height: 24px;
       fill: $color-yellow;
-      animation: verticalSlide 2.5s 0s infinite;
+      transition: transform .2s linear;
     }
   }
 
   &__collapse {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .2s linear;
 
+    &--open {
+      max-height: 2000px;
+      opacity: 1;
+    }
   }
 
   &__description {
     background: $color-white;
-    padding: 70px 0 100px;
+    padding: 70px 35px 100px;
+
+    @include media-max(767.98) {
+      padding: 40px 35px;
+    }
+
+    @include media-max(400) {
+      padding: 30px 20px;
+    }
   }
 
   &__description-text {
@@ -117,6 +219,12 @@
     line-height: 140.7%;
     color: $color-black;
     margin-top: 40px;
+
+    @include media-max(767.98) {
+      font-size: 15px;
+      line-height: 1.2;
+      margin-top: 20px;
+    }
   }
 }
 

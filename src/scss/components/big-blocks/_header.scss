@@ -15,6 +15,18 @@
     padding-bottom: 34px;
     @include flex-v-center;
     justify-content: space-between;
+
+    @include media-max(1024) {
+      & > * {
+        position: relative;
+        z-index: 101;
+      }
+    }
+
+    @include tablet {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
   }
 
   &__right {
@@ -23,9 +35,19 @@
 
   &__left {
     @include flex-all-center;
+
+    @include tablet {
+      flex-direction: row-reverse;
+    }
   }
 
   &__logo {
+    position: relative;
+    z-index: 101;
     @include flex-v-center;
+
+    @include media-max(767.98) {
+      max-width: 110px;
+    }
   }
 }

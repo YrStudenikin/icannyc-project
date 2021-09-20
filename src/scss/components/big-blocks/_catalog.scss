@@ -1,11 +1,31 @@
 .catalog {
   padding: 130px 0;
+  @include media-max(767.98) {
+    padding: 80px 0;
+  }
 
   &__container {
     max-width: 1460px;
   }
 
+  &__title {
+    @include media-max(767.98) {
+      padding-bottom: 28px;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    @include media-max(767.98) {
+      position: relative;
+    }
+  }
+
   &__tabs-head {
     padding: 34px 0 70px;
+
+    @include media-max(767.98) {
+      padding: 0;
+    }
   }
 }

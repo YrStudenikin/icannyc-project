@@ -1,7 +1,7 @@
 <div class="relevant-courses">
   <div class="container relevant-courses__container">
     <div class="relevant-courses__header">
-      <div class="block-title block-title--md">
+      <div class="block-title block-title--md relevant-courses__title">
         Мы подобрали курсы <span class="color-yellow">специально для тебя</span>!
       </div>
       <a class="more relevant-courses__more" href="#">
@@ -13,6 +13,7 @@
     </div>
     <div class="course-card">
       <img class="course-card__preview" src="img/course-card/aoki.png" alt="">
+      <img class="course-card__preview course-card__preview--mob" src="img/course-card/mob-bg.png" alt="">
       <div class="course-card__inner">
         <div class="course-card__data">
           <div class="course-card__header">
@@ -24,7 +25,7 @@
               </svg>
             </div>
           </div>
-          <div class="countdown course-card__countdown" data-date-end="2021-09-15T18:43:00">
+          <div class="countdown course-card__countdown" data-date-end="2021-09-23T18:43:00">
             <div class="countdown__title course-card__countdown-title">
               До конца <span class="color-yellow">акции</span>!
             </div>
@@ -66,11 +67,12 @@
             <span class="course-card__price-val-old">$99</span>
           </div>
           <div class="course-card__action">
-            <button class="btn btn--default btn--dark course-card__btn course-card__btn--more">
+            <a class="btn btn--default btn--dark course-card__btn course-card__btn--more" href="/single-course.html">
               Подробнее
-            </button>
-            <button class="btn btn--default btn--red-light course-card__btn">
-              Купить курс
+            </a>
+            <button class="btn btn--default btn--red-light course-card__btn course-card__btn--buy js-open-modal" data-modal="buying-form-modal">
+              <span>Купить курс</span>
+              <span class="course-card__btn-buy-price">28$</span>
             </button>
           </div>
         </div>
@@ -87,6 +89,7 @@
     </div>
     <div class="course-card">
       <img class="course-card__preview" src="img/course-card/aoki.png" alt="">
+      <img class="course-card__preview course-card__preview--mob" src="img/course-card/mob-bg.png" alt="">
       <div class="course-card__inner">
         <div class="course-card__data">
           <div class="course-card__header">
@@ -98,7 +101,7 @@
               </svg>
             </div>
           </div>
-          <div class="countdown course-card__countdown" data-date-end="2021-09-17T21:00:00">
+          <div class="countdown course-card__countdown" data-date-end="2021-09-23T21:00:00">
             <div class="countdown__title course-card__countdown-title">
               До конца <span class="color-yellow">акции</span>!
             </div>
@@ -140,11 +143,12 @@
             <span class="course-card__price-val-old">$99</span>
           </div>
           <div class="course-card__action">
-            <button class="btn btn--default btn--dark course-card__btn course-card__btn--more">
+            <a class="btn btn--default btn--dark course-card__btn course-card__btn--more" href="/single-course.html">
               Подробнее
-            </button>
-            <button class="btn btn--default btn--red-light course-card__btn">
-              Купить курс
+            </a>
+            <button class="btn btn--default btn--red-light course-card__btn course-card__btn--buy js-open-modal" data-modal="buying-form-modal">
+              <span>Купить курс</span>
+              <span class="course-card__btn-buy-price">28$</span>
             </button>
           </div>
         </div>
@@ -161,6 +165,7 @@
     </div>
     <div class="course-card course-card--coming">
       <img class="course-card__preview" src="img/course-card/aoki.png" alt="">
+      <img class="course-card__preview course-card__preview--mob" src="img/course-card/mob-bg.png" alt="">
       <div class="course-card__inner course-card__inner--coming">
         <div class="course-card__data course-card__data--coming">
           <div class="course-card__header course-card__header--coming">
@@ -172,7 +177,7 @@
           </div>
         </div>
         <div class="course-card__action course-card__action--coming">
-          <button class="btn btn--default btn--yellow course-card__btn">
+          <button class="btn btn--default btn--yellow course-card__btn course-card__btn--coming">
             Скоро в продаже
           </button>
         </div>
@@ -192,15 +197,33 @@
     <div class="container relevant-courses__stat-container">
       <div class="relevant-courses__stat-inner">
         <div class="relevant-courses__stat-item">
-          <div class="relevant-courses__stat-item-title">1955+</div>
+          <div class="relevant-courses__stat-item-title">
+            <span class="purecounter"
+                  data-purecounter-start="0"
+                  data-purecounter-end="1955"
+                  data-purecounter-duration="3">0</span>
+            <span>+</span>
+          </div>
           <div class="relevant-courses__stat-item-subtitle">Человек купили курсы</div>
         </div>
         <div class="relevant-courses__stat-item">
-          <div class="relevant-courses__stat-item-title">40+</div>
+          <div class="relevant-courses__stat-item-title">
+            <span class="purecounter"
+                  data-purecounter-start="0"
+                  data-purecounter-end="40"
+                  data-purecounter-duration="3">0</span>
+            <span>+</span>
+          </div>
           <div class="relevant-courses__stat-item-subtitle">Опытных спикеров</div>
         </div>
         <div class="relevant-courses__stat-item">
-          <div class="relevant-courses__stat-item-title">35+</div>
+          <div class="relevant-courses__stat-item-title">
+            <span class="purecounter"
+                  data-purecounter-start="0"
+                  data-purecounter-end="35"
+                  data-purecounter-duration="3">0</span>
+            <span>+</span>
+          </div>
           <div class="relevant-courses__stat-item-subtitle">Разных курсов</div>
         </div>
       </div>
@@ -214,7 +237,7 @@
       <form class="mail-chimp" action="">
         <div class="mail-chimp__header">
           <div class="mail-chimp__hint">Будь в курсе всех новостей и новых продуктов</div>
-          <label class="custom-checkbox" for="mail-chimp">
+          <label class="custom-checkbox mail-chimp__privacy" for="mail-chimp">
             <input type="checkbox" name="mail-chimp" id="mail-chimp">
             <div class="custom-checkbox__inner custom-checkbox__inner--inline">
               <span class="custom-checkbox__icon custom-checkbox__icon--yellow"></span>

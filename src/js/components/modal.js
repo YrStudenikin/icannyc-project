@@ -1,8 +1,19 @@
 //modals
+const body = document.querySelector('body');
 const openModalBtn = document.querySelectorAll('.js-open-modal');
 const modals = document.querySelectorAll('.modal');
 const modalContainer = document.querySelectorAll('.modal__container');
 const modalClose = document.querySelectorAll('.modal__btn-close');
+const mobileMenu = document.querySelector('.menu-mobile');
+
+function existVerticalScroll() {
+  return document.body.offsetHeight > window.innerHeight
+}
+
+function getBodyScrollTop() {
+  return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
+}
+
 
 /*--- Кнопки открытия модалок ---*/
 openModalBtn.forEach(item => {
@@ -10,6 +21,8 @@ openModalBtn.forEach(item => {
     e.preventDefault();
     let current = e.currentTarget;
     let targetModal = document.getElementById(current.getAttribute('data-modal'));
+
+    body.dataset.scrollY = getBodyScrollTop(); // сохраним значение скролла
 
     openModal(targetModal);
   });
@@ -43,22 +56,52 @@ modalClose.forEach(item => {
 });
 
 let openModal = (modal) => {
-  modals.forEach(item => {
+  modals.forEach(item => { // на случай если вызывается вторая модалка с текущей
     closeModal(item);
   });
 
-  modal.classList.add('is-open');
+  if (mobileMenu.classList.contains('menu-mobile--open')) {
+    closeMobMenu();
+  }
+
+  modal.classList.add('modal--open');
   modal.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('hide-scroll');
+  if (existVerticalScroll()) {
+    body.classList.add('body-lock');
+    body.style.top = `-${body.dataset.scrollY}px`;
+  }
 }
 
 let closeModal = (modal) => {
-/*  if (header.classList.contains('menu-open')) {
-    header.classList.remove('menu-open');
-    document.querySelector('.mobile-menu').classList.remove('is-open');
-    document.querySelector('.menu-burger').classList.remove('is-open');
-  }*/
-  modal.classList.remove('is-open');
+  modal.classList.remove('modal--open');
   modal.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('hide-scroll');
+  if (existVerticalScroll()) {
+    body.classList.remove('body-lock')
+    window.scrollTo(0, body.dataset.scrollY)
+  }
+};
+
+let closeMobMenu = () => {
+  mobileMenu.classList.remove('menu-mobile--open');
+  document.querySelector('.menu-burger').classList.remove('is-open');
+  body.classList.remove('hide-scroll')
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

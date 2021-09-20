@@ -7,17 +7,31 @@
   background: url("../img/video-bg.png");
   @include bg-cover;
 
+  @include media-max(767.98) {
+    height: 285px;
+  }
+
   &--full {
     height: 460px;
+
+    @include media-max(767.98) {
+      height: 360px;
+    }
   }
 
   &__btn {
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
     @include absolute-all-center;
+
+    @include media-max(767.98) {
+      height: 90px;
+      width: 90px;
+    }
 
     &--play {
       background: url("../img/play.png") no-repeat center;
+      background-size: contain;
     }
   }
 }

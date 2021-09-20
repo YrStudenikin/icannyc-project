@@ -2,6 +2,14 @@
   background: $color-black;
   padding: 105px 0 90px;
 
+  @include media-max(992) {
+    padding: 40px 0 40px;
+  }
+
+  @include media-max(767.98) {
+    padding: 20px 0 20px;
+  }
+
   &__container {
     max-width: 1460px;
   }
@@ -10,9 +18,27 @@
     @include flex-v-center;
     justify-content: space-between;
     padding-bottom: 34px;
+
+    @include media-max(767.98) {
+      max-width: 330px;
+      padding-bottom: 74px;
+      position: relative;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    @include media-max(992) {
+      max-width: 400px;
+    }
   }
 
   &__more {
+    @include media-max(767.98) {
+      position: absolute;
+      right: 0;
+      bottom: 16px;
+    }
 
     .more__text {
       font-family: Cuprum, sans-serif;
@@ -31,14 +57,26 @@
   &__stat {
     margin: 76px 0 96px;
 
+    @include media-max(767.98) {
+      margin: 60px 0;
+    }
+
     &-container {
       max-width: 1180px;
+
+      @include media-max(767.98) {
+        padding: 0;
+      }
     }
 
     &-inner {
       display: flex;
       flex-direction: row;
       width: 100%;
+
+      @include media-max(767.98) {
+        flex-wrap: wrap;
+      }
     }
 
     &-item {
@@ -46,8 +84,24 @@
       padding: 19px 65px;
       background: $color-bg-blocks;
 
+      @include media-max(1024) {
+        padding: 19px 65px;
+      }
+
+      @include media-max(767.98) {
+        margin: 8px 0;
+      }
+
+      @include media-max(767.98) {
+        width: 100%;
+      }
+
       &:nth-child(2) {
         margin: 0 36px;
+
+        @include media-max(767.98) {
+          margin: 8px 0;
+        }
       }
 
       &-title {
@@ -67,12 +121,29 @@
     max-width: 1690px;
     margin-left: auto;
     display: flex;
+
+    @include media-max(1600) {
+      justify-content: center;
+    }
   }
 
   &__mail {
     width: 55%;
     margin-right: 104px;
     align-self: center;
+
+    @include media-max(1600) {
+      width: 870px;
+      margin-right: 0;
+    }
+
+    @include media-max(992) {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 15px 50px;
+      position: relative;
+    }
   }
 
   &__mail-title {
@@ -80,14 +151,30 @@
     font-weight: 700;
     font-size: 72px;
     margin-bottom: 40px;
+
+    @include media-max(992) {
+      font-size: 42px;
+    }
+
+    @include media-max(767.98) {
+      font-size: 36px;
+    }
   }
 
   &__team-wrap {
     width: 45%;
+
+    @include media-max(1600) {
+      display: none;
+    }
   }
 
   &__form-group {
     @include flex-v-center;
+
+    @include media-max(992) {
+      flex-direction: column;
+    }
 
     & > * {
       height: 50px;
@@ -97,8 +184,16 @@
   &__mail-input {
     width: 34%;
 
+    @include media-max(992) {
+      width: 100%;
+    }
+
     &:nth-child(2) {
       margin: 0 7px;
+
+      @include media-max(992) {
+        margin: 10px 0;
+      }
     }
   }
 
@@ -106,6 +201,10 @@
     padding: 10px 20px;
     font-size: 18px;
     flex-grow: 1;
+
+    @include media-max(992) {
+      width: 100%;
+    }
   }
 
   &__team {

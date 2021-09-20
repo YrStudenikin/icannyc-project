@@ -1,0 +1,36 @@
+.tippy-box {
+  position: relative;
+  background-color: #1A1C21;
+  border-radius: 12px;
+  font-family: Cuprum, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #FFFFFF;
+  outline: 0;
+  transition-property: transform,visibility,opacity;
+
+  @include media-max(767.98) {
+    font-size: 12px;
+  }
+
+  @include media-max(400) {
+    font-size: 9px;
+    border-radius: 5px;
+  }
+}
+
+.tippy-content {
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+
+  @include media-max(767.98) {
+    padding: 10px;
+  }
+}
+
+.tippy-arrow {
+  color: #1A1C21;
+}

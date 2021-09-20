@@ -4,6 +4,10 @@
   border-radius: 10px;
   @include flex-v-center;
 
+  @include tablet {
+    display: none;
+  }
+
   &__btn {
     padding: 0;
     margin-right: 27px;

@@ -1,8 +1,11 @@
 .answers {
   padding: 40px 0 96px;
-  //background: url("../img/answers/answers-bg.png");
   background: $color-black;
   @include bg-cover;
+
+  @include media-max(767.98) {
+    display: none;
+  }
 
   &__container {
     max-width: 1520px;

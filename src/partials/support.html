@@ -15,14 +15,30 @@
               <use xlink:href="img/sprite.svg#telegram"></use>
             </svg>
           </button>
-          <button class="btn btn--yellow btn--center support__info-btn">
+          <button class="btn btn--yellow btn--center support__info-btn js-open-support">
             Подписаться на e-mail рассылку
           </button>
         </div>
       </div>
-      <div class="support__phone-wrap">
-        <div class="support__phone">
-
+      <div class="support__form-wrap">
+        <div class="support__form-bg">
+          <form class="support__form" action="">
+            <div class="support__form-title">Подписаться на рассылку</div>
+            <input class="input input--default support__form-input" type="text" placeholder="Введите имя">
+            <input class="input input--default support__form-input" type="email" placeholder="Введите E-mail">
+            <button class="btn btn--default btn--red-dark btn--center support__form-btn">
+              Быть в курсе событий
+            </button>
+            <label class="custom-checkbox" for="support-mail1">
+              <input type="checkbox" name="mail-chimp" id="support-mail1">
+              <div class="custom-checkbox__inner custom-checkbox__inner--inline">
+                <span class="custom-checkbox__icon custom-checkbox__icon--red"></span>
+                <span class="custom-checkbox__text custom-checkbox__text--inline">
+                Я принимаю <a class="text-underline" href="#">политику</a> конфиденциальности сайта
+              </span>
+              </div>
+            </label>
+          </form>
         </div>
       </div>
     </div>

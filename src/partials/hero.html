@@ -1,13 +1,13 @@
 <div class="hero">
   <div class="hero-intro">
-    <div class="container">
+    <div class="container hero-intro__container">
       <h1 class="hero-intro__title">
         <span class="typed"></span>
         <span id="typed-cursor">|</span>
       </h1>
       <div class="hero-intro__buy">
-        <button class="btn btn--default btn--yellow hero-intro__btn">
-          Купить курс от $28
+        <button class="btn btn--default btn--yellow btn--blinking hero-intro__btn">
+          <span>Купить курс от $28</span>
         </button>
         <span class="hero-intro__hint">Количество продаж ограничено</span>
       </div>
@@ -26,7 +26,8 @@
     <div class="hero-bottom__right">
       <div class="hero-stat">
         <div class="hero-stat__item">
-          <div class="hero-stat__item-title">1955+</div>
+          <div
+            class="hero-stat__item-title">1955+</div>
           <div class="hero-stat__item-subtitle">Человек купили курсы</div>
         </div>
         <div class="hero-stat__item">
@@ -38,7 +39,26 @@
           <div class="hero-stat__item-subtitle">Разных курсов</div>
         </div>
       </div>
-      <div class="hero__socials socials">
+      <div class="hero-mail">
+        <div class="hero-mail__title">Подпишись на рассылку чтобы не пропустить важные новости!</div>
+        <form action="" class="hero-mail__form">
+          <input class="input input--default input--bg-dark hero-mail__form-input" type="email"
+                 placeholder="Введите E-mail">
+          <button class="btn btn--default btn--yellow btn--center hero-mail__form-btn">
+            Быть в курсе событий
+          </button>
+          <label class="custom-checkbox" for="support-mail">
+            <input type="checkbox" name="mail-chimp" id="support-mail">
+            <div class="custom-checkbox__inner custom-checkbox__inner--inline">
+              <span class="custom-checkbox__icon custom-checkbox__icon--red"></span>
+              <span class="custom-checkbox__text custom-checkbox__text--inline">
+                Я принимаю <a class="text-underline" href="#">политику</a> конфиденциальности сайта
+              </span>
+            </div>
+          </label>
+        </form>
+      </div>
+      <div class="socials hero__socials">
         <a class="socials__link" href="">
           <svg>
             <use xlink:href="img/sprite.svg#instagram"></use>

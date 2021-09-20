@@ -2,12 +2,21 @@
   padding: 100px 0;
   background: #131313;
 
+  @include media-max(1024) {
+    padding: 80px 0 40px;
+  }
+
   &__container {
     max-width: 1620px;
   }
 
   &__inner {
     display: flex;
+
+    @include media-max(1024) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__col {
@@ -18,16 +27,51 @@
       margin: 0 auto;
       padding: 0 60px;
       display: flex;
+
+      @include media-max(1500) {
+        padding: 0;
+      }
+
+      @include media-max(1024) {
+        display: none;
+      }
+
+      &--mob {
+        width: initial;
+        margin: initial;
+        padding: initial;
+        display: initial;
+      }
     }
 
     &--logo {
       @include flex-v-center;
+
+      @include media-max(1024) {
+        margin-bottom: 42px;
+        width: auto;
+      }
     }
 
     &--socials {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      width: auto;
+
+      @include media-max(1024) {
+        margin-top: 45px;
+        text-align: center;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media-max(1024) {
+        display: block;
+        width: auto;
+      }
     }
   }
 
@@ -45,10 +89,22 @@
     font-weight: 500;
     font-size: 18px;
     margin-bottom: 16px;
+
+    &--mob {
+      font-size: 18px;
+      color: $color-white;
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
   }
 
   &__nav-wrap {
     display: flex;
+  }
+
+  &__nav-block {
+    @include flex-all-center;
+    flex-direction: column;
   }
 
   &__nav-list {
@@ -59,12 +115,33 @@
     &--space {
       padding-left: 110px;
       padding-right: 110px;
+
+      @include media-max(1500) {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+
+    &--mob {
+      height: initial;
+      max-height: 0;
+      transition: all .2s linear;
+      overflow: hidden;
+    }
+
+    &--open {
+      max-height: 300px;
+      margin-bottom: 26px;
     }
   }
 
   &__nav-item {
     @include not-last {
       margin-bottom: 13px;
+    }
+
+    &--mob {
+      text-align: center;
     }
   }
 
@@ -80,5 +157,25 @@
 
   &__socials {
     margin-top: 15px;
+  }
+
+  &__nav-btn {
+    margin-bottom: 18px;
+    @include flex-v-center;
+
+    svg {
+      width: 17px;
+      height: 13px;
+      fill: $color-red-dark;
+      margin-left: 12px;
+      transform: rotate(0);
+      transition: all .2s linear;
+    }
+
+    &--open {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
   }
 }

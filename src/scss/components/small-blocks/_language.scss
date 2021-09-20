@@ -4,7 +4,49 @@
   font-weight: 400;
   font-size: 24px;
 
+  &__box {
+    position: relative;
+  }
+
   &__active-name {
     color: $color-white;
+  }
+
+  &__list-wrapper {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    @include absolute-h-center;
+    top: calc(100% + 20px);
+    transition: all .2s linear;
+
+    &--open {
+      max-height: 600px;
+      opacity: 1;
+      top: calc(100% + 10px);
+    }
+  }
+
+  &__list {
+    padding: 13px 18px;
+    background: $color-black;
+    border-radius: 5px;
+  }
+
+  &__list-btn {
+    font-family: Cuprum, sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    color: $color-white;
+    transition: $transition;
+
+    &:hover {
+      color: $color-yellow;
+    }
+
+    &[disabled=disabled], &:disabled {
+      color: darken($color-white, 30%);
+      cursor: default;
+    }
   }
 }

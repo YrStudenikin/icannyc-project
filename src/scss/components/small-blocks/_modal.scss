@@ -2,7 +2,7 @@
   position: relative;
   display: none;
 
-  &.is-open {
+  &--open {
     display: block;
   }
 
@@ -25,9 +25,14 @@
     border-radius: 22px;
     padding: 46px 62px 68px;
     width: 675px;
-    max-height: 100vh;
+    max-height: 90vh;
     overflow-y: auto;
     box-sizing: border-box;
+    margin: 10px;
+
+    @include media-max(767.98) {
+      padding: 50px 30px 40px;
+    }
 
     &--text {
       width: 100%;
@@ -35,6 +40,10 @@
 
       @include media-min(1600) {
         width: 1560px;
+      }
+
+      @include media-max(992) {
+        padding: 50px 30px;
       }
     }
   }
@@ -48,6 +57,19 @@
     position: absolute;
     top: 25px;
     right: 25px;
+
+    @include media-max(992) {
+      top: 15px;
+      right: 15px;
+    }
+
+    @include media-max(540) {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
 
     &:hover svg {
       transform: rotate(90deg);

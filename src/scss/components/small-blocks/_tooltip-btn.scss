@@ -1,0 +1,39 @@
+.tooltip-btn {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #4E4E4E;
+  transition: $transition;
+  @include flex-all-center;
+
+  @include media-max(400) {
+    width: 21px;
+    height: 21px;
+  }
+
+  &[aria-describedby] {
+    background: $color-red-light;
+  }
+
+  &__icon {
+    font-family: Cuprum, sans-serif;
+    font-size: 19px;
+    line-height: 1;
+    color: $color-white;
+    transition: $transition;
+    display: inline-block;
+    margin-left: 2px;
+
+    @include media-max(400) {
+      font-size: 14px;
+      margin-left: 0;
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+}

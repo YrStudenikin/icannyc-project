@@ -11,10 +11,8 @@
   line-height: normal;
   cursor: pointer;
 
-  &:hover {
-    & .more__arrow {
-      animation: moveMoreArrow 1.7s ease-in-out infinite;
-    }
+  & .more__arrow {
+    animation: moveMoreArrow 1.7s ease-in-out infinite;
   }
 
   &__text {
@@ -44,7 +42,7 @@
   }
 }
 
-@keyframes moveMoreArrow{
+@keyframes moveMoreArrow {
   0% {
     transform: translateX(0);
   }

@@ -1,9 +1,31 @@
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1680px;
+  width: 100%;
+
+  @include media-min(768) {
+    max-width: 740px;
+  }
+
+  @include media-min(992) {
+    max-width: 960px;
+  }
+
+  @include media-min(1240) {
+    max-width: 1170px;
+  }
+
+  @include media-min(1700) {
+    max-width: 1600px;
+  }
 
   &--header {
     max-width: 1415px;
+  }
+
+  &--mob-full {
+    @include media-max(767.98) {
+      padding: 0;
+    }
   }
 }
