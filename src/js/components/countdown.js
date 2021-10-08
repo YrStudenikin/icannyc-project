@@ -92,33 +92,3 @@ class CountDown {
     block[1].innerHTML = val[1];
   }
 }
-
-const complete = () => {
-  console.log('таймер окончен');
-};
-
-
-const createCountDownInstance = (element, expiredDate) => {
-  // Класс счетчика. Принимает html элемент счетчика, конечную дату и функцию,
-  // которая срабатывает по окончанию таймера
-  return new CountDown(
-    element,
-    expiredDate,
-    complete
-  );
-}
-
-const initCountdown = () => {
-  const countdownItems = document.querySelectorAll('.countdown');
-
-  if (countdownItems.length > 0) {
-    for (let i = 0; i < countdownItems.length; ++i) {
-      let item = countdownItems[i];
-      let endDateTime = new Date(item.getAttribute('data-date-end'));
-
-      createCountDownInstance(item, endDateTime, complete);
-    }
-  }
-}
-
-initCountdown();

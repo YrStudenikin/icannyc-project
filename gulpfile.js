@@ -133,7 +133,7 @@ const watchFiles = () => {
   browserSync.init({
     server: {
       baseDir: "./app",
-      index: "single-course.html"
+      // index: "single-course.html"
     },
   });
 
